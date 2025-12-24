@@ -92,16 +92,16 @@ with gr.Blocks(theme=gr.themes.Glass()) as app:
     
     with gr.Row():
         # COLUMN 1
-        with gr.Column():
-            lbl_a = gr.Textbox(label="Label 1", value="Me (Prompt)", placeholder="Name this input...")
+        with gr.Column(min_width=100):
+            lbl_a = gr.Textbox(label="Label 1", value="Model A", placeholder="Name this input...")
             box_a = gr.TextArea(show_label=False, placeholder="Paste text here...", lines=4)
         # COLUMN 2
-        with gr.Column():
-            lbl_b = gr.Textbox(label="Label 2", value="Model A", placeholder="Name this input...")
+        with gr.Column(min_width=100):
+            lbl_b = gr.Textbox(label="Label 2", value="Model B", placeholder="Name this input...")
             box_b = gr.TextArea(show_label=False, placeholder="Paste text here...", lines=4)
         # COLUMN 3
-        with gr.Column():
-            lbl_c = gr.Textbox(label="Label 3", value="Model B", placeholder="Name this input...")
+        with gr.Column(min_width=100):
+            lbl_c = gr.Textbox(label="Label 3", value="Model C", placeholder="Name this input...")
             box_c = gr.TextArea(show_label=False, placeholder="Paste text here...", lines=4)
         
     btn = gr.Button("RUN THE ARRAY", variant="primary")
